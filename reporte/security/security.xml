@@ -1,0 +1,5 @@
+<odoo>
+    <record id="group_sat_manager" model="res.groups">
+        <field name="name">Reporte / SAT</field>
+    </record>
+</odoo>

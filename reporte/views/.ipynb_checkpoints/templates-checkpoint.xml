@@ -1,0 +1,35 @@
+<odoo>
+  <data>
+    <!-- actions opening views on models -->
+    <record model="ir.ui.view" id="list_tree_view">
+            <field name="name">Listado reportes</field>
+            <field name="model">list.reportes</field>
+            <field name="arch" type="xml">
+                <tree string="List of reports" create="false">
+                    <field name="rfcEmisor"/>
+                    <field name="rfcReceptor"/>
+                </tree>
+            </field>
+    </record>   
+      
+    <record id="list_sat_reports" model="ir.actions.act_window">
+      <field name="name">Reportes SAT</field>
+      <field name="res_model">list.reportes</field>
+      <field name="view_mode">tree</field>
+    </record>
+
+    <!-- Top menu item -->
+      
+    <menuitem name="Reporte SAT" id="reporte.menu_root"/>
+      
+    <!-- menu categories -->
+      
+    <menuitem name="Listado" id="reporte.menu_3" sequence="3" parent="reporte.menu_root"/>
+      
+    <!-- actions -->
+      
+    <menuitem name="Ver todos los reportes" id="reporte.menu_3_list" parent="reporte.menu_3"
+              action="list_sat_reports"/>
+      
+  </data>
+</odoo>

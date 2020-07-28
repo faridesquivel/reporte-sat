@@ -1,0 +1,44 @@
+<odoo>
+  <data>
+    <!-- actions opening views on models -->
+      <record model="ir.ui.view" id="descarga_form_view">
+            <field name="name">Datos para descarga</field>
+            <field name="model">reporte.data</field>
+            <field name="arch" type="xml">
+                <form string="Formulario para descarga">
+                    <sheet>
+                        <group>
+                            <field name="rfcSolicitante"/>
+                            <field name="startDate"/>
+                            <field name="endDate"/>
+                            <field name="rfcEmisor"/>
+                            <field name="rfcReceptor"/>
+                            <button name="start_download" string="Login" type="object"></button>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>  
+      
+    <record id="form_descarga_sat" model="ir.actions.act_window">
+      <field name="name">Datos para descarga</field>
+      <field name="res_model">reporte.data</field>
+      <field name="target">inline</field>
+      <field name="view_mode">form</field>
+    </record>
+
+    <!-- Top menu item -->
+      
+    <menuitem name="Reporte SAT" id="reporte.menu_root"/>
+      
+    <!-- menu categories -->
+      
+    <menuitem name="Datos para descarga" id="reporte.menu_2" sequence="2" parent="reporte.menu_root"/>
+      
+    <!-- actions -->
+      
+    <menuitem name="Ingresar datos para descarga" id="reporte.menu_2_form" parent="reporte.menu_2"
+              action="form_descarga_sat"/>
+      
+  </data>
+</odoo>

@@ -1,0 +1,44 @@
+<odoo>
+  <data>
+    <!-- actions opening views on models -->
+      <record model="ir.ui.view" id="session_form_view">
+            <field name="name">Auth View</field>
+            <field name="model">reporte.auth</field>
+            <field name="arch" type="xml">
+                <form string="Session Form">
+                    <sheet>
+                        <group>
+                            <field name="uid" invisible="1"/>
+                            <field name="token" invisible="1"/>
+                            <field name="privateKey"/>
+                            <field name="cert"/>
+                            <field name="privateKeyPass"/>
+                            <button name="do_login" string="Login" type="object"></button>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>  
+      
+    <record id="list_sat_action" model="ir.actions.act_window">
+      <field name="name">Autenticación</field>
+      <field name="res_model">reporte.auth</field>
+      <field name="target">inline</field>
+      <field name="view_mode">form</field>
+    </record>
+
+    <!-- Top menu item -->
+      
+    <menuitem name="Reporte SAT" id="reporte.menu_root"/>
+      
+    <!-- menu categories -->
+      
+    <menuitem name="Autenticación" id="reporte.menu_1" sequence="1" parent="reporte.menu_root"/>
+      
+    <!-- actions -->
+      
+    <menuitem name="Ingresar e-firma" id="reporte.menu_1_list" parent="reporte.menu_1"
+              action="list_sat_action"/>
+      
+  </data>
+</odoo>

@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+          <record id="auth0" model="reporte.auth">
+            <field name="privateKeyPass">farid12345</field>
+            <field name="privateKey">FDJSLFDJL13921321FDSJMZMZ1321321</field>
+            <field name="cert">DSA123B1V12VV21B21N1N211321FDSJMZMZ1321321</field>
+          </record>
+
+          <record id="auth1" model="reporte.auth">
+            <field name="privateKeyPass">jufna192912</field>
+            <field name="privateKey">ZXZCVXXXXJL13921321FDSJMZMZ1321321</field>
+            <field name="cert">DSA123B1V12VV21B21N1N211321FDSJMZMZ1321321</field>
+          </record>
+    </data>
+</odoo>

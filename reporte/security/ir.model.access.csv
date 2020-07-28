@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+auth_reporte_sat,reporte.auth,model_reporte_auth,group_sat_manager,1,1,1,1
+list_reporte_sat,list.reportes,model_list_reportes,group_sat_manager,1,1,1,1
+rfc_reporte_sat,reporte.data,model_reporte_data,group_sat_manager,1,1,1,1
